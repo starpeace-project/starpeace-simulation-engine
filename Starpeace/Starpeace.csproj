@@ -9,5 +9,9 @@
     <Folder Include="Rates\" />
     <Folder Include="Types\" />
     <Folder Include="Storage\" />
+    <Folder Include="Buildings\" />
+    <Folder Include="Server\" />
+    <Folder Include="Client\" />
+    <Folder Include="ClientServerProtocol\" />
   </ItemGroup>
 </Project>
