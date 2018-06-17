@@ -1,10 +1,10 @@
 ﻿using System;
 namespace Starpeace.Server
 {
-    public class AcceptIps
+    public struct AcceptIp
     {
-        public AcceptIps()
-        {
-        }
+        public int Protocol { get; set; }
+        public string Name { get; set; }
+        public string IpAddress { get; set; }
     }
 }

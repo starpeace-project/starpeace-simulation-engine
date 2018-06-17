@@ -1,4 +1,5 @@
-﻿namespace Starpeace.Rates
+﻿using System;
+namespace Starpeace.Rates
 {
     public class DeathRates
     {
@@ -62,6 +63,21 @@
             {
                 HighClass -= Increment;
             }
+        }
+
+        public double GetLowClassDeaths(double population)
+        {
+            return Math.Round(LowClass * population / 365);
+        }
+
+        public double GetMiddleClassDeaths(double population)
+        {
+            return Math.Round(MiddleClass * population / 365);
+        }
+
+        public double GetHighClassDeaths(double population)
+        {
+            return Math.Round(HighClass * population / 365);
         }
     }
 }
