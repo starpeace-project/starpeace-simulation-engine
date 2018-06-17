@@ -3,16 +3,8 @@ namespace Starpeace
 {
     public class Town
     {
-        private string _town_name;
-
-        public string Name {
-            get {
-                return this._town_name;
-            }
-            set {
-                this._town_name = value;
-            }
-        }
-
+        public string Name { get; set; }
+        public int Xpoint { get; set; }
+        public int Ypoint { get; set; }
     }
 }
