@@ -79,5 +79,14 @@ namespace Starpeace.Rates
         {
             return Math.Round(HighClass * population / 365);
         }
+
+        public Population CalculateDeaths(Population population)
+        {
+            population.LowClass.Population -= GetLowClassDeaths(population.LowClass.Population);
+            population.MiddleClass.Population -= GetMiddleClassDeaths(population.MiddleClass.Population);
+            population.HighClass.Population -= GetHighClassDeaths(population.HighClass.Population);
+
+            return population;
+        }
     }
 }

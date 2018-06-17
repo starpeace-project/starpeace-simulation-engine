@@ -4,7 +4,6 @@ namespace Starpeace
 {
     public class Kernel
     {
-        Population population = new Population();
         int Counter { get; set; }
 
         public Kernel()

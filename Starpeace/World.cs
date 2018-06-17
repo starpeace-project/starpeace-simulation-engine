@@ -16,6 +16,8 @@ namespace Starpeace
 
         public List<Town> Towns { get; set; }
 
+        public double Population { get; set; }
+
         public void AddTown(Town town)
         {
             Towns.Add(town);

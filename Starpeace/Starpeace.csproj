@@ -13,5 +13,6 @@
     <Folder Include="Server\" />
     <Folder Include="Client\" />
     <Folder Include="ClientServerProtocol\" />
+    <Folder Include="Testing\" />
   </ItemGroup>
 </Project>
