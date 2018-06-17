@@ -5,7 +5,7 @@ namespace Starpeace
 {
     class Program
     {
-        static readonly Kernel _kernel = new Kernel();
+        static Kernel kernel = new Kernel();
 
         static void Main(string[] args)
         {
@@ -25,7 +25,8 @@ namespace Starpeace
 
         static void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
-            _kernel.Update();
+            Console.WriteLine("Updating....");
+            kernel.Update();
         }
     }
 }

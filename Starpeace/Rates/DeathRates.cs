@@ -67,17 +67,17 @@ namespace Starpeace.Rates
 
         public double GetLowClassDeaths(double population)
         {
-            return Math.Round(LowClass * population / 365);
+            return Math.Round((LowClass * population) / 365);
         }
 
         public double GetMiddleClassDeaths(double population)
         {
-            return Math.Round(MiddleClass * population / 365);
+            return Math.Round((MiddleClass * population) / 365);
         }
 
         public double GetHighClassDeaths(double population)
         {
-            return Math.Round(HighClass * population / 365);
+            return Math.Round((HighClass * population) / 365);
         }
 
         public Population CalculateDeaths(Population population)

@@ -11,5 +11,7 @@ namespace Starpeace.Buildings
 
         public string Name { get; set; }
         public Location location = new Location();
+
+
     }
 }

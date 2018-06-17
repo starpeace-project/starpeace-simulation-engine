@@ -1,21 +1,30 @@
 ﻿using System;
+using Starpeace.Testing;
 
 namespace Starpeace
 {
     public class Kernel
     {
-        int Counter { get; set; }
+        double Counter = 0;
+        World world = new World();
+        TestingData1 testingData = new TestingData1();
 
         public Kernel()
         {
-            Counter = 0;
+            Initialise();
         }
 
-        public void Update()
+        public void Initialise()
         {
-            Counter++;
-            Console.WriteLine(Counter);
-            population.Calculate();
+            world = testingData.MakeTowns(world);
+        }
+
+        public bool Update()
+        {
+            Counter += 1;
+            world.CalculatePopulation();
+            Console.WriteLine("Population Calculated, World Population is now: " + world.Population);
+            return true;
         }
     }
 }

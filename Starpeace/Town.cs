@@ -7,14 +7,22 @@ namespace Starpeace
         public string Name { get; set; }
         public Location location = new Location();
 
-        public int Population { get; set; }
+        public Population population = new Population();
 
         public BirthRates birthRates = new BirthRates();
         public DeathRates deathRates = new DeathRates();
 
-        public void hi()
+        public Town()
         {
-            deathRates.IncreaseLowClassDeathRate(3);
         }
+
+        public double CalculatePopulation()
+        {
+            population = birthRates.CalculateBirths(population);
+            population = deathRates.CalculateDeaths(population);
+
+            return population.LowClass.Population + population.MiddleClass.Population + population.HighClass.Population;
+        }
+
     }
 }

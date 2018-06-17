@@ -66,17 +66,26 @@ namespace Starpeace.Rates
 
         public double GetLowClassBirths(double population)
         {
-            return Math.Round(LowClass * population / 365);
+            return Math.Round((LowClass * population) / 365);
         }
 
         public double GetMiddleClassBirths(double population)
         {
-            return Math.Round(MiddleClass * population / 365);
+            return Math.Round((MiddleClass * population) / 365);
         }
 
         public double GetHighClassBirths(double population)
         {
-            return Math.Round(HighClass * population / 365);
+            return Math.Round((HighClass * population) / 365);
+        }
+
+        public Population CalculateBirths(Population population)
+        {
+            population.LowClass.Population += GetLowClassBirths(population.LowClass.Population);
+            population.MiddleClass.Population += GetMiddleClassBirths(population.MiddleClass.Population);
+            population.HighClass.Population += GetHighClassBirths(population.HighClass.Population);
+
+            return population;
         }
     }
 }
