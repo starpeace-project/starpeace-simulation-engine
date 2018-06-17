@@ -20,9 +20,13 @@ namespace Starpeace
 
         public void CalculatePopulation()
         {
+            Population = 0;
             foreach (Town town in Towns)
             {
-                Population += town.CalculatePopulation();
+                Console.WriteLine("Calculating Population For: " + town.Name);
+                double newpop = town.CalculatePopulation();
+                Console.WriteLine(town.Name + " new population is " + newpop);
+                Population += newpop;
             }
         }
 
