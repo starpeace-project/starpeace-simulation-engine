@@ -5,7 +5,7 @@ using System.Threading;
 using System.Text;
 using Starpeace.ClientServerProtocol;
 
-namespace Starpeace.Server
+namespace Starpeace.Client
 {
     public static class AsyncClient
     {
@@ -20,7 +20,7 @@ namespace Starpeace.Server
         // The response from the remote device.
         private static String response = String.Empty;
 
-        private static void StartClient(string endpoint, int port)
+        public static void StartClient(string endpoint, int port)
         {
             // Connect to a remote device.
             try
