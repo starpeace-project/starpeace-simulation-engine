@@ -8,6 +8,7 @@ using MySql.Data;
 using Starpeace.Data;
 using Starpeace.Data.Models;
 using Insight.Database;
+using System.Configuration;
 
 
 namespace Starpeace
@@ -19,7 +20,7 @@ namespace Starpeace
         static void Main(string[] args)
         {
             Console.WriteLine("Connecting to database...");
-            var mySqlConnection = new MySql.Data.MySqlClient.MySqlConnection("Database=sptest;Data Source=localhost;User Id=root;Password=local;SslMode=none");
+            var mySqlConnection = new MySql.Data.MySqlClient.MySqlConnection(new MySQLConnection("localhost", "sptest", "root", "local").ConnectionString());
             IList<User> users = mySqlConnection.QuerySql<User>("SELECT * FROM user");
 
             foreach (User user in users)
