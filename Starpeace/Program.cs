@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Timers;
-using Starpeace.Server;
-using Starpeace.Client;
-using System.Threading;
-using MySql.Data;
 using Starpeace.Data;
 using Starpeace.Data.Models;
 using Insight.Database;
-using System.Configuration;
-
 
 namespace Starpeace
 {
@@ -20,8 +14,8 @@ namespace Starpeace
         static void Main(string[] args)
         {
             Console.WriteLine("Connecting to database...");
-            var mySqlConnection = new MySql.Data.MySqlClient.MySqlConnection(new MySQLConnection("localhost", "sptest", "root", "local").ConnectionString());
-            IList<User> users = mySqlConnection.QuerySql<User>("SELECT * FROM user");
+            Database db = new Database();
+            var users = db.GetUsers();
 
             foreach (User user in users)
             {
