@@ -7,7 +7,7 @@ using Starpeace.ClientServerProtocol;
 
 namespace Starpeace.Server
 {
-    public class AsyncClient
+    public static class AsyncClient
     {
         // ManualResetEvent instances signal completion.
         private static ManualResetEvent connectDone =
