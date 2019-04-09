@@ -16,6 +16,12 @@ namespace Starpeace
 
         public void Initialise()
         {
+            /**
+             * This is where we are going to get our initial settings from the database
+             * for us to setup the engine, in this way, on restart of server, it will also
+             * pickup where we left off
+             */
+
             world = testingData.MakeTowns(world);
         }
 

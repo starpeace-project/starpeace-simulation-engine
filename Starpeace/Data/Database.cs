@@ -21,5 +21,16 @@ namespace Starpeace.Data
         {
             return connection.QuerySql<User>("SELECT * FROM user");
         }
+
+        public object GetWorldSettings()
+        {
+            /**
+             * This is a loader function used on engine startup and then at intervals
+             * to ensure we are reflecting changes in the worlds setup for example
+             * adjustments made as we test etc.
+             */
+
+            return new object();
+        }
     }
 }
